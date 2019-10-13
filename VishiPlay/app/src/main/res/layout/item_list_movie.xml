@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="br.com.vishi.vishiplay.movie.model.Movie" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="0dp"
+            android:layout_weight="2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_photo_found"
+            app:imageUrl="@{model.poster}" />
+
+    </LinearLayout>
+</layout>

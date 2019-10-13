@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="br.com.vishi.vishiplay.movie.movie_list.MoviesViewModel"/>
+
+        <variable
+                name="adapter"
+                type="br.com.vishi.vishiplay.movie.movie_list.MoviesAdapter"/>
+
+        <variable
+                name="layoutManager"
+                type="androidx.recyclerview.widget.GridLayoutManager"/>
+
+        <variable
+                name="dividerItemDecoration"
+                type="androidx.recyclerview.widget.DividerItemDecoration"/>
+    </data>
+
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movies"
+                app:spanCount="3"
+                tools:itemCount="24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_list_movie"
+                app:adapter="@{adapter}"
+                app:layoutManager="@{layoutManager}"
+                app:dividerItemDecoration="@{dividerItemDecoration}"/>
+
+    </LinearLayout>
+
+</layout>
